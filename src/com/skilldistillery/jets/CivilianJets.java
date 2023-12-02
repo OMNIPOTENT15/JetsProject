@@ -31,8 +31,21 @@ public class CivilianJets extends Jet implements SafetyBrief, LoadingCargo {
 	}
 
 	@Override
+	public void loading() {
+		System.out
+				.println(getModel() + " cargo loading in progress. All cargo and passengers are successfully loaded.");
+	}
+
+	@Override
+	public void conductBrief() {
+		System.out.println(getModel() + " has conducted a safety brief.");
+
+	}
+
+	@Override
 	public String toString() {
-		return "CivilianJets [company=" + company + ", yearProduced=" + yearProduced + ", getModel()=" + getModel()
-				+ ", getSpeed()=" + getSpeed() + ", getRange()=" + getRange() + ", getPrice()=" + getPrice() + "]";
+		return "CivilianJets [getModel()=" + getModel() + ", getSpeed()=" + getSpeed() + "\n\t, getRange()="
+				+ getRange() + ", getPrice()=" + getPrice() + "\n\t, company=" + company + ", yearProduced="
+				+ yearProduced + "]\n\n";
 	}
 }

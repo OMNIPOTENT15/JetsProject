@@ -21,8 +21,19 @@ public class SpaceJets extends Jet implements SystemsCheck, SafetyBrief {
 	}
 
 	@Override
+	public void conductBrief() {
+		System.out.println("Space jet has conducted safety brief. Ready for takeoff!");
+
+	}
+
+	@Override
+	public void allSystemsGo() {
+		System.out.println("Space jet checks in progress. All system are green for go.");
+	}
+
+	@Override
 	public String toString() {
-		return "SpaceJets [missions=" + missions + ", getModel()=" + getModel() + ", getSpeed()=" + getSpeed()
-				+ ", getRange()=" + getRange() + ", getPrice()=" + getPrice() + "]";
+		return "SpaceJets [getModel()=" + getModel() + ", getSpeed()=" + getSpeed() + "\n\t, getRange()=" + getRange()
+				+ ", getPrice()=" + getPrice() + "\n\t, missions=" + missions + "]\n\n";
 	}
 }

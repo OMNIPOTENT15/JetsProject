@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public abstract class Jet implements Fly, FuelStatus {
+public abstract class Jet implements Fly {
 	private String model;
 	private double speed;
 	private double range;
@@ -46,6 +46,11 @@ public abstract class Jet implements Fly, FuelStatus {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	@Override
+	public void flight() {
+		System.out.println("\t" + getModel() + " is successfully flying!");
 	}
 
 	@Override

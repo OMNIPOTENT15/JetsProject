@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class MilitaryJets extends Jet implements SystemsCheck, Dogfight {
+public class MilitaryJets extends Jet implements SystemsCheck, Dogfight, SafetyBrief {
 	private String purpose;
 	private int yearProduced;
 	private String campaign;
@@ -42,10 +42,26 @@ public class MilitaryJets extends Jet implements SystemsCheck, Dogfight {
 	}
 
 	@Override
+	public void conductBrief() {
+		System.out.println(getModel() + " has conducted a safety brief.");
+
+	}
+
+	@Override
+	public void allSystemsGo() {
+		System.out.println(getModel() + " system checks in progress. All systems are green for go.");
+	}
+
+	@Override
+	public void fight() {
+		System.out.println("War has broken out and " + getModel() + " is now in a heated dogfight! Your speciality is a " + purpose + ".");
+	}
+
+	@Override
 	public String toString() {
-		return "MilitaryJets [purpose=" + purpose + ", yearProduced=" + yearProduced + ", campaign=" + campaign
-				+ ", getModel()=" + getModel() + ", getSpeed()=" + getSpeed() + ", getRange()=" + getRange()
-				+ ", getPrice()=" + getPrice() + "]";
+		return "MilitaryJets [getModel()=" + getModel() + ", getSpeed()=" + getSpeed() + "\n\t, getRange()="
+				+ getRange() + ", getPrice()=" + getPrice() + "\n\t, purpose=" + purpose + ", yearProduced="
+				+ yearProduced + ", campaign=" + campaign + "]\n\n";
 	}
 
 }
