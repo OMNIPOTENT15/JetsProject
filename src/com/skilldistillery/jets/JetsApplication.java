@@ -64,34 +64,37 @@ public class JetsApplication {
 				System.out.println(jet.toString());
 				((Jet) jet).flight();
 				flightTime(jet);
-				System.out.println();
 			}
 			flightMenu();
 		} else if (userChoice == 3) {
 			fastestJet();
-			System.out.println();
 			flightMenu();
 		} else if (userChoice == 4) {
 			longestRange();
-			System.out.println();
 			flightMenu();
 		} else if (userChoice == 5) {
 			for (Jet jet : jets) {
 				if (jet instanceof CivilianJets) {
+					System.out.println();
 					((CivilianJets) jet).conductBrief();
 					((CivilianJets) jet).loading();
+					System.out.println();
+					System.out.println(
+							"--------------------------------------------------------------------------------------------");
 				}
-				System.out.println();
 			}
 			flightMenu();
 		} else if (userChoice == 6) {
 			for (Jet jet : jets) {
 				if (jet instanceof MilitaryJets) {
-					((MilitaryJets) jet).conductBrief();
+					System.out.println();
 					((MilitaryJets) jet).allSystemsGo();
 					((MilitaryJets) jet).fight();
+					System.out.println();
+					System.out.println(
+							"--------------------------------------------------------------------------------------------");
+
 				}
-				System.out.println();
 			}
 			flightMenu();
 
@@ -115,8 +118,9 @@ public class JetsApplication {
 	public void getJets() {
 		for (Jet jet : jets) {
 			System.out.println(jet);
+			System.out.println(
+					"--------------------------------------------------------------------------------------------");
 		}
-		System.out.println();
 	}
 
 	public void addingJets() {
@@ -211,7 +215,8 @@ public class JetsApplication {
 		System.out.printf("%.2f", flightTime);
 		System.out.println(" hours.");
 		System.out.println();
-		System.out.println();
+		System.out.println(
+				"--------------------------------------------------------------------------------------------");
 
 	}
 

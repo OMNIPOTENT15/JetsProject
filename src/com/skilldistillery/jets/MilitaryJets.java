@@ -54,7 +54,7 @@ public class MilitaryJets extends Jet implements SystemsCheck, Dogfight, SafetyB
 
 	@Override
 	public void fight() {
-		System.out.println("War has broken out and " + getModel() + " is now in a heated dogfight! Your speciality is a " + purpose + ".");
+		System.out.println("War has broken out and your " + getModel() + " is now in a heated dogfight!\nYour fighting speciality is a " + purpose + ".");
 	}
 
 	@Override
