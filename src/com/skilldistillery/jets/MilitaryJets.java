@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class MilitaryJets extends Jet implements systemCheck {
+public class MilitaryJets extends Jet implements SystemsCheck, Dogfight {
 	private String purpose;
 	private int yearProduced;
 	private String campaign;

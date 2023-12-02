@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class SpaceJets extends Jet implements systemCheck {
+public class SpaceJets extends Jet implements SystemsCheck, SafetyBrief {
 	private String missions;
 
 	public SpaceJets() {

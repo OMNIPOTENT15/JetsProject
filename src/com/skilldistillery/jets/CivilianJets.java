@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class CivilianJets extends Jet implements SafetyBrief {
+public class CivilianJets extends Jet implements SafetyBrief, LoadingCargo {
 	private String company;
 	private int yearProduced;
 
