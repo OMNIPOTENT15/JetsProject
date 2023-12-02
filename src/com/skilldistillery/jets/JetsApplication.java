@@ -88,7 +88,6 @@ public class JetsApplication {
 			campaign = sc.next();
 			Jet yourJ = new MilitaryJets(model, speed, range, price, purpose, year, campaign);
 			airfield.add(yourJ);
-			flightMenu();
 
 		} else if (choice == 2) {
 			System.out.println("Please enter the civilian jet model: ");
@@ -105,8 +104,7 @@ public class JetsApplication {
 			year = sc.nextInt();
 			Jet yourJ = new CivilianJets(model, speed, range, price, company, year);
 			airfield.add(yourJ);
-			flightMenu();
-
+			
 		} else if (choice == 3) {
 			System.out.println("Please enter the space jet model: ");
 			model = sc.next();
@@ -122,8 +120,7 @@ public class JetsApplication {
 
 			Jet yourJ = new SpaceJets(model, speed, range, price, mission);
 			airfield.add(yourJ);
-			flightMenu();
-
+			
 		} else {
 			System.err.println("Please input a valid choice.");
 			addingJets();
