@@ -130,7 +130,7 @@ public class JetsApplication {
 	public void removeJet() {
 		airfield.displayJets();
 		System.out.println(
-				"\nPlease select a jet you would like to remove.\nThe jets are listed in sequential order starting at one: "
+				"\nPlease select a jet you would like to remove by enter a number.\nThe jets are listed in sequential order starting at one: "
 						+ "");
 		int i = sc.nextInt();
 		sc.nextLine();
