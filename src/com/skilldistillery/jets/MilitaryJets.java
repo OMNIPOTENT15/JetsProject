@@ -49,12 +49,31 @@ public class MilitaryJets extends Jet implements SystemsCheck, Dogfight, SafetyB
 
 	@Override
 	public void allSystemsGo() {
-		System.out.println(getModel() + " system checks in progress. All systems are green for go.");
+		System.out.println(getModel() + " system checks in progress. All systems are green for go.\n");
 	}
 
 	@Override
 	public void fight() {
-		System.out.println("War has broken out and your " + getModel() + " is now in a heated dogfight!\nYour fighting speciality is a " + purpose + ".");
+		double battleRoll = Math.random() * 10;
+
+		System.out.println("War has broken out and your " + getModel()
+				+ " is now in a heated dogfight!\nYour fighting speciality is a " + purpose + ".\n");
+		boolean survive = true;
+		while (survive) {
+			if (battleRoll >= 8) {
+				System.out.println("Your " + getModel() + " has destroyed an enemy jet!");
+				battleRoll = Math.random() * 10;
+			} else if (battleRoll >= 6) {
+				System.out.println("Your " + getModel() + " has dodged enemy fire!");
+				battleRoll = Math.random() * 10;
+			} else if (battleRoll >= 4) {
+				System.out.println("Your " + getModel() + " has been hit!");
+				battleRoll = Math.random() * 10;
+			} else {
+				System.out.println("Your " + getModel() + " has been destroyed!");
+				survive = false;
+			}
+		}
 	}
 
 	@Override

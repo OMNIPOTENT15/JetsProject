@@ -33,7 +33,8 @@ public class CivilianJets extends Jet implements SafetyBrief, LoadingCargo {
 	@Override
 	public void loading() {
 		System.out
-				.println(getModel() + " cargo loading in progress. All cargo and passengers are successfully loaded.");
+				.println(getModel() + " cargo loading in progress...\n\nAll cargo and passengers are successfully loaded.\n"
+						+ company + " wishes you a safe flight.");
 	}
 
 	@Override
