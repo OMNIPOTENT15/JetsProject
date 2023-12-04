@@ -60,13 +60,13 @@ public class MilitaryJets extends Jet implements SystemsCheck, Dogfight, SafetyB
 				+ " is now in a heated dogfight!\nYour fighting speciality is a " + purpose + ".\n");
 		boolean survive = true;
 		while (survive) {
-			if (battleRoll >= 8) {
+			if (battleRoll >= 7) {
 				System.out.println("Your " + getModel() + " has destroyed an enemy jet!");
 				battleRoll = Math.random() * 10;
-			} else if (battleRoll >= 6) {
+			} else if (battleRoll >= 5) {
 				System.out.println("Your " + getModel() + " has dodged enemy fire!");
 				battleRoll = Math.random() * 10;
-			} else if (battleRoll >= 4) {
+			} else if (battleRoll >= 3) {
 				System.out.println("Your " + getModel() + " has been hit!");
 				battleRoll = Math.random() * 10;
 			} else {
